@@ -34,4 +34,4 @@ async def scooter(ctx):
     await ctx.send("Scooter kullandığınız zaman hiç CO2 üretmez.")
     await ctx.send("Güneş ışınları içeriye girebilir ve çıkabilir.")
 
-bot.run('YOUR TTOKEN')
+bot.run('YOUR TOKEN')
