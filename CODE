@@ -1,0 +1,37 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'{bot.user} ist online!')
+
+@bot.command()
+async def araba(ctx):
+    await ctx.send("Arabayı daha az sürmenizi öneririm!")
+    await ctx.send("Arabayı kullandığınız zaman CO2 havaya yükselir.")
+    await ctx.send("Güneş ışınları içeriye girebilir ama çıkamaz ve Dünya ısınır.")
+
+@bot.command()
+async def bisiklet(ctx):
+    await ctx.send("Bisikleti sürmeyi öneririm!")
+    await ctx.send("Bisikleti kullandığınız zaman CO2 havaya yükselmez.")
+    await ctx.send("Güneş ışınları içeriye girebilir ve çıkabilir.")
+
+@bot.command()
+async def motosiklet(ctx):
+    await ctx.send("Motosiklet sürmeyi Arabadan daha çok öneririm!")
+    await ctx.send("Motosiklet kullandığınız zaman Arabadan daha az CO2 üretir.")
+    await ctx.send("Güneş ışınları içeriye girebilir ama çıkamaz ve Dünya ısınır.")
+
+@bot.command()
+async def scooter(ctx):
+    await ctx.send("Scooter sürmeyi Arabadan daha çok öneririm!")
+    await ctx.send("Scooter kullandığınız zaman hiç CO2 üretmez.")
+    await ctx.send("Güneş ışınları içeriye girebilir ve çıkabilir.")
+
+bot.run('MTM2NTAzNDc1NjM2MTY4NzEzMA.G_wq0K.9ZxW0Pt9L-xfCgOMfzHxkoIDDw-Uvw_ld2iKyU')
